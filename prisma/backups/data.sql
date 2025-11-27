@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict 7x79ndgJ089YyCIWcZERMXtMwLr01Mmn3IbePxoTgTKh3GT3rPli4TYcZKDcwBW
+-- \restrict qfZJSCalJs2RfRoYhOrCIr61LDeWIdNWG1XGNrKyrtfxerUpNyz0KsBu337VqV8
 
 -- Dumped from database version 15.8
 -- Dumped by pg_dump version 17.6
@@ -282,11 +282,11 @@ COPY "auth"."oauth_clients" ("id", "client_secret_hash", "registration_type", "r
 -- Data for Name: sessions; Type: TABLE DATA; Schema: auth; Owner: supabase_auth_admin
 --
 
-COPY "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "factor_id", "aal", "not_after", "refreshed_at", "user_agent", "ip", "tag", "oauth_client_id", "refresh_token_hmac_key", "refresh_token_counter") FROM stdin;
-f9dcf03d-2e65-4073-84c4-4e9df8c0fc3f	acbbf18a-c573-405d-b72e-1a94a7b1e7a8	2024-10-03 17:46:45.564744+00	2024-10-03 17:46:45.564744+00	\N	aal1	\N	\N	node	91.134.18.105	\N	\N	\N	\N
-8f4b1a38-e317-480a-bb3b-3b8f38d11d82	acbbf18a-c573-405d-b72e-1a94a7b1e7a8	2024-10-03 17:47:11.496249+00	2024-10-03 17:47:11.496249+00	\N	aal1	\N	\N	node	91.134.18.105	\N	\N	\N	\N
-97588167-c219-49ea-863b-e016bfda2044	34d1810e-fd8c-41d6-bc30-5f800fc6f318	2024-09-22 07:11:14.379626+00	2024-09-22 07:11:14.379626+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0	91.134.94.126	\N	\N	\N	\N
-da2d1d1e-87da-476b-9e5b-ac5532a9a077	34d1810e-fd8c-41d6-bc30-5f800fc6f318	2024-09-22 07:12:36.223474+00	2024-10-29 17:38:35.919225+00	\N	aal1	\N	2024-10-29 17:38:35.919152	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36	57.129.24.63	\N	\N	\N	\N
+COPY "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "factor_id", "aal", "not_after", "refreshed_at", "user_agent", "ip", "tag", "oauth_client_id", "refresh_token_hmac_key", "refresh_token_counter", "scopes") FROM stdin;
+f9dcf03d-2e65-4073-84c4-4e9df8c0fc3f	acbbf18a-c573-405d-b72e-1a94a7b1e7a8	2024-10-03 17:46:45.564744+00	2024-10-03 17:46:45.564744+00	\N	aal1	\N	\N	node	91.134.18.105	\N	\N	\N	\N	\N
+8f4b1a38-e317-480a-bb3b-3b8f38d11d82	acbbf18a-c573-405d-b72e-1a94a7b1e7a8	2024-10-03 17:47:11.496249+00	2024-10-03 17:47:11.496249+00	\N	aal1	\N	\N	node	91.134.18.105	\N	\N	\N	\N	\N
+97588167-c219-49ea-863b-e016bfda2044	34d1810e-fd8c-41d6-bc30-5f800fc6f318	2024-09-22 07:11:14.379626+00	2024-09-22 07:11:14.379626+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0	91.134.94.126	\N	\N	\N	\N	\N
+da2d1d1e-87da-476b-9e5b-ac5532a9a077	34d1810e-fd8c-41d6-bc30-5f800fc6f318	2024-09-22 07:12:36.223474+00	2024-10-29 17:38:35.919225+00	\N	aal1	\N	2024-10-29 17:38:35.919152	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36	57.129.24.63	\N	\N	\N	\N	\N
 \.
 
 
@@ -322,7 +322,7 @@ COPY "auth"."mfa_challenges" ("id", "factor_id", "created_at", "verified_at", "i
 -- Data for Name: oauth_authorizations; Type: TABLE DATA; Schema: auth; Owner: supabase_auth_admin
 --
 
-COPY "auth"."oauth_authorizations" ("id", "authorization_id", "client_id", "user_id", "redirect_uri", "scope", "state", "resource", "code_challenge", "code_challenge_method", "response_type", "status", "authorization_code", "created_at", "expires_at", "approved_at") FROM stdin;
+COPY "auth"."oauth_authorizations" ("id", "authorization_id", "client_id", "user_id", "redirect_uri", "scope", "state", "resource", "code_challenge", "code_challenge_method", "response_type", "status", "authorization_code", "created_at", "expires_at", "approved_at", "nonce") FROM stdin;
 \.
 
 
@@ -690,6 +690,6 @@ SELECT pg_catalog.setval('"public"."settings_id_seq"', 1, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict 7x79ndgJ089YyCIWcZERMXtMwLr01Mmn3IbePxoTgTKh3GT3rPli4TYcZKDcwBW
+-- \unrestrict qfZJSCalJs2RfRoYhOrCIr61LDeWIdNWG1XGNrKyrtfxerUpNyz0KsBu337VqV8
 
 RESET ALL;
