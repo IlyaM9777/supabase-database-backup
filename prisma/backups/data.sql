@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict KqMQCsKmCGMkiopn6UriwaqRUM2Vh3q0Fwbp7u9ifbqucRePq4IijTM8yD7bdmW
+-- \restrict XFHkdxdzweM2eeG1A2CBOGhhLdewQ70cpCdfDHdGUeVW4kvzS1sSzF5BW8vJA6A
 
 -- Dumped from database version 15.8
 -- Dumped by pg_dump version 17.6
@@ -531,6 +531,8 @@ COPY "storage"."buckets_vectors" ("id", "type", "created_at", "updated_at") FROM
 
 COPY "storage"."objects" ("id", "bucket_id", "name", "owner", "created_at", "updated_at", "last_accessed_at", "metadata", "version", "owner_id", "user_metadata", "level") FROM stdin;
 68f9eae7-7ef7-475e-a36e-2073a17f26d8	cabin-images	Gemma.png	\N	2025-12-31 10:00:38.880806+00	2025-12-31 10:00:38.880806+00	2025-12-31 10:00:38.880806+00	{"eTag": "\\"5b2a718bc6d47723741fac9bf4ae968c-1\\"", "size": 266127, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2025-12-31T10:00:39.000Z", "contentLength": 266127, "httpStatusCode": 200}	69a4bae0-a421-486d-91d3-fd44f77a494b	\N	\N	1
+c0ec8484-ee4a-452a-9a14-914d638562d3	cabin-images	0.2629235390206758DogBoardingWithCareicon.png	\N	2026-01-04 12:38:18.099381+00	2026-01-04 12:38:18.099381+00	2026-01-04 12:38:18.099381+00	{"eTag": "\\"4f4771f0e2a9e66058b2edc87303f56b\\"", "size": 1427, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2026-01-04T12:38:19.000Z", "contentLength": 1427, "httpStatusCode": 200}	d6e3b135-1c61-4e38-b9b2-5d8b62630d1d	\N	{}	1
+99f94d4b-5017-4b84-8228-ff4b69959379	cabin-images	0.7271964894401516DogBoardingWithCaredog.png	\N	2026-01-04 12:39:28.669386+00	2026-01-04 12:39:28.669386+00	2026-01-04 12:39:28.669386+00	{"eTag": "\\"f619defde80e250cf8ab832180da1d05\\"", "size": 758062, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2026-01-04T12:39:29.000Z", "contentLength": 758062, "httpStatusCode": 200}	130271e8-befb-4560-aad0-f09b0aebb6a3	\N	{}	1
 bb20b23c-1af3-4a0e-98b0-8bec6768ac5b	cabin-images	Violette.png	\N	2025-12-31 10:00:38.876312+00	2025-12-31 10:00:38.876312+00	2025-12-31 10:00:38.876312+00	{"eTag": "\\"4227b2f77422bb6c5523dfa22696f158-1\\"", "size": 294191, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2025-12-31T10:00:39.000Z", "contentLength": 294191, "httpStatusCode": 200}	c7e5cc71-e7d1-4bda-aaf3-8c4122558996	\N	\N	1
 6746588c-0d23-457b-8f44-219bb71be0ac	cabin-images	Account.png	\N	2025-12-31 10:00:38.813787+00	2025-12-31 10:00:38.813787+00	2025-12-31 10:00:38.813787+00	{"eTag": "\\"2fadaa215f235ff1d0c8fd3103619e19-1\\"", "size": 215716, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2025-12-31T10:00:39.000Z", "contentLength": 215716, "httpStatusCode": 200}	062f61c7-522c-4395-a488-847c23622786	\N	\N	1
 35984548-fdd5-4b7d-838c-2d0d58c5e7b4	cabin-images	0.9760508949909265DogBoardingWithCareGirl.png	\N	2026-01-01 09:48:20.26759+00	2026-01-01 09:48:20.26759+00	2026-01-01 09:48:20.26759+00	{"eTag": "\\"d67618fee986967715189b29bd2b732d\\"", "size": 200966, "mimetype": "image/png", "cacheControl": "max-age=3600", "lastModified": "2026-01-01T09:48:21.000Z", "contentLength": 200966, "httpStatusCode": 200}	d68a5f61-ea00-4b12-b1b6-945f109247b2	\N	{}	1
@@ -707,6 +709,6 @@ SELECT pg_catalog.setval('"public"."settings_id_seq"', 1, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict KqMQCsKmCGMkiopn6UriwaqRUM2Vh3q0Fwbp7u9ifbqucRePq4IijTM8yD7bdmW
+-- \unrestrict XFHkdxdzweM2eeG1A2CBOGhhLdewQ70cpCdfDHdGUeVW4kvzS1sSzF5BW8vJA6A
 
 RESET ALL;
